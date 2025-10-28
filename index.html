@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Engineering & Data Portfolio</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import (Tailwind uses Inter by default, but this ensures fallback) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc; /* light background */
+        }
+        /* Style for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0d9488', /* Teal 600 */
+                        'primary-dark': '#0f766e', /* Teal 700 */
+                        'secondary': '#1f2937', /* Gray 800 */
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-gray-800">
+
+    <!-- Sticky Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-2xl font-bold text-primary hover:text-primary-dark transition duration-300">
+                    Your Name
+                </a>
+                <nav class="space-x-4">
+                    <a href="#about" class="text-secondary hover:text-primary transition duration-300 font-medium hidden sm:inline-block">About</a>
+                    <a href="#skills" class="text-secondary hover:text-primary transition duration-300 font-medium hidden sm:inline-block">Skills</a>
+                    <a href="#projects" class="text-secondary hover:text-primary transition duration-300 font-medium">Projects</a>
+                    <a href="#contact" class="text-white bg-primary hover:bg-primary-dark px-4 py-2 rounded-lg transition duration-300 shadow-md">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- 1. Hero Section -->
+        <section id="hero" class="py-20 text-center bg-white rounded-xl shadow-lg mb-12">
+            <h1 class="text-5xl sm:text-6xl font-extrabold text-secondary mb-4">
+                Data-Driven <span class="text-primary">Engineering</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                I combine robust **engineering** practices with advanced **data analysis** to build scalable solutions and uncover actionable insights. Specializing in cloud architecture and automated data pipelines.
+            </p>
+            <a href="#projects" class="bg-primary text-white text-lg font-semibold px-8 py-3 rounded-xl shadow-lg hover:bg-primary-dark transition duration-300 transform hover:scale-105">
+                View My Work
+            </a>
+        </section>
+
+        <!-- 2. About & Skills Section -->
+        <section id="about" class="grid md:grid-cols-3 gap-8 py-12">
+            
+            <!-- About Card -->
+            <div class="md:col-span-2 bg-white p-8 rounded-xl shadow-lg border-t-4 border-primary">
+                <h2 class="text-3xl font-bold text-secondary mb-4">About Me</h2>
+                <p class="text-lg text-gray-700 mb-4">
+                    As an engineer, my core focus is efficiency and reliability. My transition into data analysis allows me to apply these principles to information systems, ensuring data is accurate, accessible, and utilized effectively to drive business decisions. I thrive in environments where I can bridge the gap between technical infrastructure and business intelligence.
+                </p>
+                <p class="text-lg text-gray-700">
+                    I believe that the best insights come from well-structured data. My projects reflect a commitment to building robust ETL/ELT processes and creating compelling, user-friendly dashboards.
+                </p>
+            </div>
+
+            <!-- Skills List -->
+            <div id="skills" class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                <h2 class="text-3xl font-bold text-secondary mb-6">Core Toolkit</h2>
+                <ul class="space-y-3 text-gray-700 text-lg">
+                    <li class="flex items-center">
+                        <span class="text-primary mr-3">✓</span> **Languages:** Python (Pandas, PySpark), SQL (PostgreSQL, MySQL)
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-primary mr-3">✓</span> **Data Warehousing:** Snowflake, Google BigQuery, Redshift
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-primary mr-3">✓</span> **Cloud & Orchestration:** AWS/GCP, Docker, Kubernetes, Apache Airflow
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-primary mr-3">✓</span> **BI/Visualization:** Tableau, Looker, Plotly/Dash
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-primary mr-3">✓</span> **Methodology:** Agile, CI/CD, Test-Driven Development
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 3. Projects Section -->
+        <section id="projects" class="py-16">
+            <h2 class="text-4xl font-bold text-center text-secondary mb-12">Featured Projects</h2>
+            
+            <div class="grid gap-10 md:grid-cols-3">
+
+                <!-- Project 1: Data Engineering Pipeline -->
+                <div class="bg-white rounded-xl shadow-xl p-6 transition transform hover:scale-[1.02] duration-300 border-t-4 border-indigo-500">
+                    <div class="text-3xl text-indigo-500 mb-4">🔧</div> <!-- Icon Placeholder -->
+                    <h3 class="text-2xl font-bold text-secondary mb-3">Server Log ETL Pipeline</h3>
+                    <span class="inline-block bg-indigo-100 text-indigo-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">Data Engineering</span>
+                    <p class="text-gray-700 mb-4">
+                        Designed and implemented a scalable ETL pipeline using **Python** and **Apache Airflow** to ingest, clean, and transform large volumes of web server log data into a **Snowflake** data warehouse.
+                    </p>
+                    <p class="font-semibold text-sm text-gray-600">Technologies: Python, Airflow, Docker, Snowflake, SQL.</p>
+                    <a href="LINK_TO_GITHUB_REPO_1" target="_blank" class="block mt-4 text-primary font-medium hover:text-primary-dark transition duration-300">
+                        View Code on GitHub &rarr;
+                    </a>
+                </div>
+
+                <!-- Project 2: Business Dashboard -->
+                <div class="bg-white rounded-xl shadow-xl p-6 transition transform hover:scale-[1.02] duration-300 border-t-4 border-green-500">
+                    <div class="text-3xl text-green-500 mb-4">📈</div> <!-- Icon Placeholder -->
+                    <h3 class="text-2xl font-bold text-secondary mb-3">Customer Churn Visualization</h3>
+                    <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">Data Analysis & BI</span>
+                    <p class="text-gray-700 mb-4">
+                        Created an interactive **Tableau** dashboard providing C-suite visibility into monthly customer churn drivers. Led to a 15% improvement in retention efforts by identifying key risk segments.
+                    </p>
+                    <p class="font-semibold text-sm text-gray-600">Technologies: Tableau, PostgreSQL, Data Modeling, LookerML (optional).</p>
+                    <a href="LINK_TO_DASHBOARD_LIVE_DEMO" target="_blank" class="block mt-4 text-primary font-medium hover:text-primary-dark transition duration-300">
+                        View Live Dashboard &rarr;
+                    </a>
+                </div>
+
+                <!-- Project 3: Engineering/ML Project -->
+                <div class="bg-white rounded-xl shadow-xl p-6 transition transform hover:scale-[1.02] duration-300 border-t-4 border-yellow-500">
+                    <div class="text-3xl text-yellow-500 mb-4">🤖</div> <!-- Icon Placeholder -->
+                    <h3 class="text-2xl font-bold text-secondary mb-3">Predictive Maintenance Model</h3>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">ML Engineering</span>
+                    <p class="text-gray-700 mb-4">
+                        Developed a time-series forecasting model using **Scikit-learn** and **Pandas** to predict equipment failure 7 days in advance, integrating the prediction into an operational API endpoint.
+                    </p>
+                    <p class="font-semibold text-sm text-gray-600">Technologies: Python, Scikit-learn, FastAPI, GCP Cloud Functions.</p>
+                    <a href="LINK_TO_GITHUB_REPO_3" target="_blank" class="block mt-4 text-primary font-medium hover:text-primary-dark transition duration-300">
+                        View Architecture &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Contact Section -->
+        <section id="contact" class="py-16 text-center bg-primary rounded-xl shadow-lg mt-12">
+            <h2 class="text-4xl font-bold text-white mb-4">Let's Connect</h2>
+            <p class="text-xl text-primary-light max-w-2xl mx-auto mb-8 text-gray-200">
+                I'm always open to discussing new data challenges and engineering opportunities.
+            </p>
+            <div class="flex justify-center space-x-6 text-xl">
+                <a href="mailto:YOUR_EMAIL@example.com" class="text-white hover:text-yellow-300 transition duration-300 flex items-center">
+                    <!-- Placeholder for Mail Icon -->
+                    <span class="mr-2">📧</span> Email
+                </a>
+                <a href="YOUR_LINKEDIN_URL" target="_blank" class="text-white hover:text-yellow-300 transition duration-300 flex items-center">
+                    <!-- Placeholder for LinkedIn Icon -->
+                    <span class="mr-2">🔗</span> LinkedIn
+                </a>
+                <a href="YOUR_GITHUB_URL" target="_blank" class="text-white hover:text-yellow-300 transition duration-300 flex items-center">
+                    <!-- Placeholder for GitHub Icon -->
+                    <span class="mr-2">🐙</span> GitHub
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-6 mt-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Your Name. Built with HTML and Tailwind CSS.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
